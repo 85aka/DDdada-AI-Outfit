@@ -1,0 +1,377 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+body {
+    margin: 0;
+    background-color: #F6F7F7;
+    justify-content: center;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+.top {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #080101;
+    z-index: 99;
+}
+
+#DD {
+    font-size: 16px;
+    left: 35px;
+    position: absolute;
+    overflow: visible;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#dada {
+    font-size: 14px;
+    top: 5px;
+    right: 35px;
+    position: absolute;
+    overflow: visible;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+ul.top li {
+    float: right;
+    left: 49px;
+}
+
+ul.top li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgba(250, 253, 253, 1);
+    letter-spacing: 0.5px;
+}
+
+ul.top li a:hover {
+    background-color: #111;
+}
+
+ /* ＝＝＝＝＝＝＝上傳＝＝＝＝＝＝＝ */
+ .uploadROW{
+    position: relative;
+    align-items: center;
+    top: 80px;
+    display: flex;
+    width: 88%;
+    height: 100px;
+    align-content:baseline;
+    margin: 0 auto;
+    justify-content: center; 
+   
+}
+.uploadL{
+    border: 1px dashed #989898;
+    border-radius: 10px;
+    height: 100%;
+    width: 50%;
+    margin-right: 20px;
+}
+.uploadR{
+    border: 1px dashed #989898;
+    border-radius: 10px;
+    height: 100%;
+    width: 50%;
+}
+.upload-button {
+    /* Used to position the input */
+    position: relative;
+    width: 86%;
+    height: 70px;
+    display: box;
+    place-content: center;
+    top: 80px;
+    z-index: 3;     
+    margin: 0 auto;
+    display: flex;
+    cursor: pointer; 
+    align-items: center;
+}
+
+.upload-button__input1 {
+    /* Take the full size */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer; 
+    display: flex;
+
+}
+.upload-button__input2 {
+    /* Take the full size */
+    height: 100%;
+    right: 0px;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer; 
+    display: flex;
+    
+}
+
+
+#dropimgbg {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer; 
+    border-radius: 10px;
+}
+.textDrop{
+    
+    margin: 15px;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+    font-style: Lato bold;
+    font-size: 15px;
+    color: #074747;
+    display: flex; /* 垂直居中 */
+    align-items: center;
+    margin-top: 38px;
+}
+/* ＝＝＝＝＝＝＝上傳結束＝＝＝＝＝＝＝ */
+/* ＝＝＝＝＝＝＝左側＝＝＝＝＝＝＝ */
+.row{
+    position: relative;
+    align-items: center;
+    top: 110px;
+    display: flex;
+    width: 88%;
+    align-content:baseline;
+    margin: 0 auto;
+    justify-content: space-between; 
+    width: (90);
+    height: 450px;
+    float: left;
+    left: 70px;
+}
+.left{
+    margin-top: -85px;
+    width: 20%;
+    height: 400px;
+    padding: 0px;
+    margin-left: 1%;
+    margin-right: 20px;
+    z-index: 2;
+   
+}
+.leftT{
+    width: 210px;
+    height: 210px;
+    border: 1px solid #989898;
+    border-radius: 10px;
+    margin: 5px auto; /* 使用 auto 来水平居中 */
+    text-align: center; /* 文本水平居中 */
+}
+.leftT, .leftB img {
+    display: block; /* 使图像水平居中 */
+    margin: 0 auto; /* 使用 auto 来水平居中 */
+  }
+
+.leftB{
+    width: 210px;
+    height: 210px;
+    border: 1px solid #989898;
+    border-radius: 10px;
+    margin: 5px auto; /* 使用 auto 来水平居中 */
+    text-align: center; /* 文本水平居中 */
+}
+.left img{
+    width: 210px;
+    height: 210px;
+    border-radius: 10px;
+}
+
+#Diffusion{
+   
+    border-radius: 10px;
+    color: antiquewhite;   
+   
+}
+.exportButton{
+    z-index: 91;     
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 子元素上对齐，实现左对齐 */
+
+}
+/* ＝＝＝＝＝＝＝左邊照片結束＝＝＝＝＝＝＝ */
+.right{
+    width: 80%;
+    height: 425px;
+    position: relative;
+    margin-left: 2%;
+    z-index: 2;
+    right: 5px;
+}
+.rightTop{
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px 0px 0px 0px;
+    width: 94%;
+}
+.txtT{
+    font-style: Proxima Nova bolder;
+    font-family: Arial, Helvetica, sans-serif Lato;
+    color: #074747;
+    font-size: 18px;   
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: -21px;
+}
+#mytop{
+    white-space: nowrap; /* 防止文本自动换行 */
+    overflow-x: scroll; 
+}
+#mytop::-webkit-scrollbar {
+    height: 10px;
+}
+
+#mytop::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 滚动条轨道的背景色 */
+}
+
+#mytop::-webkit-scrollbar-thumb {
+    background: #A75CAB; /* 滚动条的背景色#A75CAB;  */
+    border-radius: 10px; /* 滚动条的圆角 */
+}
+
+#mytop::-webkit-scrollbar-thumb:hover {
+    background: #2185D0; 
+}
+
+#mytop img {
+    height: 155px;
+    width: 155px;
+    border-radius: 10px;
+    border: 1px solid #989898;
+}
+/* ＝＝＝＝＝＝＝右上 上衣＝＝＝＝＝＝＝ */
+
+.rightBotton {
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    margin: 15px 0px 0px 0px;
+    width: 94%;
+  }
+  
+.txtB{
+    font-style: Proxima Nova bolder;
+    font-family: Arial, Helvetica, sans-serif Lato;
+    font-family: 'Roboto', sans-serif;
+    color: #074747;
+    font-size: 18px;   
+    margin-top: -15px; 
+    position: relative;
+    top: -12px;
+}
+#mybutton{
+    white-space: nowrap; /* 防止文本自动换行 */
+    overflow-x: scroll; 
+ 
+}
+#mybutton::-webkit-scrollbar {
+    height: 10px;
+    overflow: visible;
+}
+
+#mybutton::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 滚动条轨道的背景色 */
+}
+
+#mybutton::-webkit-scrollbar-thumb {
+    background: #2185D0;/* 滚动条的背景色#A75CAB;  */
+    border-radius: 10px; /* 滚动条的圆角 */
+}
+
+#mybutton::-webkit-scrollbar-thumb:hover {
+    background: #A75CAB; 
+}
+
+#mybutton img {
+    height: 155px;
+    width: 155px;
+    border-radius: 10px;
+    border: 1px solid #989898;
+}
+
+div.rightTop {
+    position: relative;
+    top: -20px; /* 向上移动 20 像素，可以根据需要调整此值 */
+  }
+
+@media (max-width: 850px) {
+    .right, .left {
+        width: 100%; /* 设置宽度为100%以充满屏幕宽度 */
+        margin: 0; /* 移除左右外边距 */
+        
+    }
+}
+button {
+    background-color: #878AE8;
+    color: white;
+    padding: 7px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 10px 10px 1px rgba(1, 2, 5, 0.2);
+    position: relative;
+    bottom: -95px;
+    right: 0vw; 
+  }
+  #prompt-text {
+    position: relative;
+    left: 80px;
+    top: 600px;
+    border: 1px solid #989898;
+    height: 50px;
+  }
+  #chat-container{
+    margin-bottom: 50px;
+  }

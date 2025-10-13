@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(247, 247, 247, 1);
+}
+
+#container {
+    display: grid;
+    place-content: center;
+    margin-top: 125px; /* 距离顶部 134px */
+}
+
+ul.top {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #080101;
+}
+
+#DD {
+    font-size: 16px;
+    left: 35px;
+    position: absolute;
+    overflow: visible;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#dada {
+    font-size: 14px;
+    top: 5px;
+    right: 35px;
+    position: absolute;
+    overflow: visible;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+ul.top li {
+    float: right;
+    left: 49px;
+}
+
+ul.top li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgba(250, 253, 253, 1);
+    letter-spacing: 0.5px;
+}
+
+ul.top li a:hover {
+    background-color: #111;
+}
+
+/* 将两个图片并排，并设置宽高为132px */
+#logBnG {
+    text-align: center;
+}
+
+#boy,
+#girl {
+    display: inline-block;
+    width: 132px;
+    height: 132px;
+}
+/* 将相应的元素放置在布局中心 */
+
+/* 将相应的元素放置在布局中心 */
+#DDt,
+#plzLogin,
+#Username,
+#buttons,
+#Password {
+    text-align: center; /* 居中文本内容 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使用负的左侧偏移来水平居中 */
+}
+
+/* 调整样式 */
+#DDt {
+    top: 295px;
+    position: absolute;
+    overflow: visible;
+    width: 721px;
+    height: 60px;
+    line-height: 36px;
+    margin-top: -4px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgba(41, 6, 21, 1);
+}
+
+#plzLogin {
+    top: 340px;
+    position: absolute;
+    overflow: visible;
+    width: 721px;
+    height: 60px;
+    line-height: 22px;
+    margin-top: -3px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(41, 6, 21, 1);
+}
+
+#Username {
+    top: 110px;
+    left: 35px; /* 调整左侧位置，根据需要进行微调 */
+    position: relative;
+    overflow: visible;
+    width: 60px;
+    white-space: nowrap;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(51, 51, 51, 0.871);
+}
+
+#Password {
+    top: 160px;
+    left: 35px;
+    position: relative;
+    overflow: visible;
+    width: 57px;
+    white-space: nowrap;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(51, 51, 51, 0.871);
+}
+#height {
+    top: 210px;
+    left: 8px; /* 调整左侧位置，根据需要进行微调 */
+    position: relative;
+    overflow: visible;
+    width: 60px;
+    white-space: nowrap;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(51, 51, 51, 0.871);
+}
+#weight {
+    top: 255px;
+    left: 8px; /* 调整左侧位置，根据需要进行微调 */
+    position: relative;
+    overflow: visible;
+    width: 60px;
+    white-space: nowrap;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(51, 51, 51, 0.871);
+}
+#gender {
+    top: 300px;
+    left: 8px; /* 调整左侧位置，根据需要进行微调 */
+    position: relative;
+    overflow: visible;
+    width: 60px;
+    white-space: nowrap;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(51, 51, 51, 0.871);
+}
+.iptUsername {
+    text-align: left; /* 居中文本内容 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使用负的左侧偏移来水平居中 */
+    position: absolute;
+    overflow: visible;
+    width: 260px;
+    height: 38px;
+    top: 390px; /* 调整垂直位置，根据需要进行微调 */
+    border: none;
+    background-color: rgb(255, 253, 253);
+}
+.iptPassword {
+    text-align: left; /* 居中文本内容 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使用负的左侧偏移来水平居中 */
+    position: absolute;
+    overflow: visible;
+    width: 260px;
+    height: 38px;
+    top: 455px; /* 调整垂直位置，根据需要进行微调 */
+    border: none;
+    background-color: rgb(255, 253, 253);
+}
+.iptHeight {
+    text-align: left; /* 居中文本内容 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使用负的左侧偏移来水平居中 */
+    position: absolute;
+    overflow: visible;
+    width: 260px;
+    height: 38px;
+    top: 520px; /* 调整垂直位置，根据需要进行微调 */
+    border: none;
+    background-color: rgb(255, 253, 253);
+}
+.iptWeight {
+    text-align: left; /* 居中文本内容 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使用负的左侧偏移来水平居中 */
+    position: absolute;
+    overflow: visible;
+    width: 260px;
+    height: 38px;
+    top: 585px; /* 调整垂直位置，根据需要进行微调 */
+    border: none;
+    background-color: rgb(255, 253, 253);
+}
+.iptGender {
+    text-align: left; /* 居中文本内容 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使用负的左侧偏移来水平居中 */
+    position: absolute;
+    overflow: visible;
+    width: 260px;
+    height: 38px;
+    top: 650px; /* 调整垂直位置，根据需要进行微调 */
+    border: none;
+    background-color: rgb(255, 253, 253);
+}
+.centered-buttons {
+    text-align: center;
+    left: 50%; /* 水平居中 */
+    position: relative;
+    top: 360px; 
+}
+.login-button {
+    
+    padding: 9px 24px 12px 24px;
+    font-size: 14px;
+    font-family: Lato;
+    background-color: #8A1999;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 50px; /* 更改右侧的 margin */
+    border-radius: 4px;
+    display: inline-block;
+}
+.signup-button {
+    padding: 9px 24px 12px 24px;
+    font-size: 14px;
+    font-family: Lato;
+    background-color: #1B1C1D;
+    color: white;
+    border: none;
+    cursor: pointer;    
+    /*margin-left: 30px;  更改左侧的 margin */
+    border-radius: 4px;
+    display: inline-block;
+    width: 260px;
+
+}

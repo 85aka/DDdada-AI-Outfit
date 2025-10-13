@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>我的衣櫃</title>
+  <link rel="stylesheet" type="text/css" id="applicationStylesheet"
+    href="{{ url_for('static', filename='css/mycloset.css') }}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/upload.js') }}"></script> <!-- 新增的行 -->
+</head>
+
+<body>
+  <ul class=top>
+    <li style="float:left"><a id="DD" href="/">DD搭搭</a></li>
+    <div id="dada">
+      <li><a href="/signout">登出</a></li>
+      <li><a href="/Mycloset">我的衣櫥</a></li>
+      <li><a href="/Todays">今日穿搭</a></li>
+      <li><a href="/">首頁</a></li>
+    </div>
+  </ul>
+
+  <div class="uploadROW">
+    <div class="uploadL"><!-- 上身部分的上傳區域 -->
+      <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form-upper">
+        <div class="upload-button1" id="upload-button-upper">
+          <!-- The real file input -->
+          <input type="file" class="upload-button__input1" name="image" id="file-input-upper" />
+
+
+          <div class="textDrop"> “ ✚ drop ur photo here for upper body ✚ ”</div>
+        </div>
+        <input type="hidden" name="category" value="upper_body">
+      </form>
+    </div>
+    <div class="uploadR">
+      <!-- 下身部分的上傳區域 -->
+      <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form-lower">
+        <div class="upload-button2" id="upload-button-lower">
+          <!-- The real file input -->
+          <input type="file" class="upload-button__input2" name="image" id="file-input-lower" />
+
+          <!-- The upload icon -->
+
+          <div class="textDrop"> “ ✚ drop ur photo here for lower body ✚ ”</div>
+        </div>
+        <input type="hidden" name="category" value="lower_body">
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="left">
+      <div class="leftT">
+        <img id="selectTop" src="{{ url_for('static', filename='assets/img/mycloset/diff.png') }}">
+      </div>
+      <br>
+      <div class="leftB">
+        <img id="selectBottom" src="{{ url_for('static', filename='assets/img/mycloset/diff.png') }}">
+      </div>
+    </div>
+    <div class="right">
+      <div class="rightTop">
+        <div class="txtT">Tops</div>
+        <div id="mytop">
+          {% for image in upper_body_images %}
+          <img src="{{ image['url'] }}" width="300">
+          {% endfor %}
+        </div>
+      </div>
+      <div class="space"></div>
+      <div class="rightBotton">
+        <div class="txtB">Bottoms</div>
+        <div id="mybutton">
+          {% for image in lower_body_images %}
+          <img src="{{ image['url'] }}" width="300">
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <button type="button" id="generate-button">Generate Image</button>
+  
+
+
+
+
+
+</body>
+
+</html>

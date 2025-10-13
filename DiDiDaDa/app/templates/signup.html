@@ -1,0 +1,67 @@
+<!--去除dist路由-->
+<!--圖片檔案改到 assets/img/login 裡面-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Welcome 歡迎 登入</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet"
+        href="{{ url_for('static', filename='css/signup.css') }}" />
+</head>
+
+<body>
+
+    <ul class=top>
+        <li style="float:left"><a id="DD" href="/">DD搭搭</a></li>
+        <div id="dada">
+            <li><a href="/signout">登入</a></li>
+            <li><a href="/Mycloset">我的衣櫥</a></li>
+            <li><a href="/Todays">今日穿搭</a></li>
+            <li><a href="#news">關於我們</a></li>
+        </div>
+    </ul>
+
+    <div id=container>
+        <div id="logBnG">
+            <img id="boy" src="{{ url_for('static', filename='assets/img/login/boy.png') }}">
+            <img id="girl" src="{{ url_for('static', filename='assets/img/login/girl.png') }}">
+        </div>
+
+        <div id="DDt">
+            <span>DD搭搭</span>
+        </div>
+
+        <div id="plzLogin">
+            <span>Please sign up for an account</span>
+        </div>
+
+        <form action="/4SignupPG" method="post">
+            <div id="Username">Username</div>
+            <input type="text" class="iptUsername" name="username">
+
+            <div id="Password">Password</div>
+            <input type="password" class="iptPassword" name="password">
+
+            <div id="height">身高</div>
+            <input type="number" class="iptHeight" name="height">
+
+            <div id="weight">體重</div>
+            <input type="number" class="iptWeight" name="weight">
+
+            <div id="gender">性别</div>
+            <select name="sex" class="iptGender">
+                <option value="man">男生</option>
+                <option value="woman">女生</option>
+            </select>
+
+            <div class="centered-buttons" id="buttons">
+                <button type="submit" class="signup-button" name="action" value="signup">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

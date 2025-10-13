@@ -1,0 +1,56 @@
+<!--去除dist路由-->
+<!--圖片檔案改到 assets/img/login 裡面-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Welcome 歡迎 登入</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet"
+        href="{{ url_for('static', filename='css/login.css') }}" />
+</head>
+
+<body>
+
+    <ul class=top>
+        <li style="float:left"><a id="DD" href="/">DD搭搭</a></li>
+        <div id="dada">
+            <li><a href="/signout">登出</a></li>
+            <li><a href="/Mycloset">我的衣櫥</a></li>
+            <li><a href="/Todays">今日穿搭</a></li>
+            <li><a href="#news">關於我們</a></li>
+        </div>
+    </ul>
+
+    <div id=container>
+        <div id="logBnG">
+            <img id="boy" src="{{ url_for('static', filename='assets/img/login/boy.png') }}">
+            <img id="girl" src="{{ url_for('static', filename='assets/img/login/girl.png') }}">
+        </div>
+
+        <div id="DDt">
+            <span>DD搭搭</span>
+        </div>
+
+        <div id="plzLogin">
+            <span>Please log in for an account</span>
+        </div>
+
+        <form action="/4SignupPG" method="post">
+            <div id="Username">Username</div>
+            <input type="text" class="iptUsername" name="username">
+
+            <div id="Password">Password</div>
+            <input type="password" class="iptPassword" name="password">
+
+            <div class="centered-buttons" id="buttons">
+                <button type="submit" class="login-button" name="action" value="login">Login</button>
+                <button type="submit" class="signup-button" name="action" value="2signup">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

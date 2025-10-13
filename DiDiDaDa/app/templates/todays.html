@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>今日ootd</title>
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet"
+		href="{{ url_for('static', filename='css/todays.css') }}" />
+	<script src="{{ url_for('static', filename='js/prompt.js') }}"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+	<ul class=top style="position: sticky;"> <!-- 導航欄 -->
+		<li style="float:left"><a id="DD" href="/">DD搭搭</a></li>
+		<div id="dada">
+			<li><a href="/signout">登出</a></li>
+			<li><a href="/Mycloset">我的衣櫥</a></li>
+			<li><a href="/Todays">今日穿搭</a></li>
+			<li><a href="/">首頁</a></li>
+		</div>
+	</ul>
+
+	<div class="weather-container"><!-- 天氣 -->
+
+		<div class="weekly-weather">
+
+			<img id="cloud-maps-location-5349714"
+				src="{{ url_for('static', filename='assets/img/todays/cloud-maps-location-5349714.png') }}">
+
+			<!-- Dropdown for city selection -->
+			<select id="city-dropdown">
+				{% for city in city_names %}
+				<option value="{{ city }}" {% if city=='新北市' %}selected{% endif %}>{{ city }}</option>
+				{% endfor %}
+			</select>
+
+
+			<!-- Display area for weather data -->
+			<div id="weather-data"></div>
+
+			<script src="{{ url_for('static', filename='js/weather.js') }}"></script>
+		</div>
+	</div>
+
+
+	<div class="row"><!-- AI 生成 -->
+		<div class="left">
+
+			<img id="AI_img" src="{{ image_url }}" alt="Generated Image"
+				onerror="this.src='assets/img/todays/metaBoy.png'">
+
+		</div>
+		<div class="right"><!-- 聊天輸入匡 -->
+			<form id="chat-form" action="/chat" method="POST">
+				<div id="searchInput"><!-- 詢問button -->
+					<input type="text" id="user-message" class="tbxSearchmore" name="user_message"
+						placeholder="Type your message...">
+
+					<input type="submit" value="">
+				</div>
+			</form>
+
+			<!-- Chat messages will be displayed here -->
+			<div id="chat-container"></div><!-- robot 真正回答的地方 -->
+			<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+
+		</div>
+	</div>
+	<div class="prompt">
+		<form id="prompt-form">
+			<button type="button" id="generate-btn">Generate Image</button>
+		</form>
+		<script src="{{ url_for('static', filename='js/image.js') }}"></script>
+	</div>
+
+	<div class="prompt">
+		<form id="prompt-form">
+			<button type="button" id="regenerate-btn">Regenerate Image</button>
+		</form>
+		<script src="{{ url_for('static', filename='js/reset.js') }}"></script>
+	</div>
+
+	<!-- Loading Overlay HTML -->
+	<div id="loading-overlay"
+		style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); z-index: 2;">
+		<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+			<p style="color: white; font-size: 24px;">圖片生成中...</p>
+		</div>
+	</div>
+
+
+	<footer> Copyright @ 2023 DDdada. | 隱私與保護政策 </footer>
+</body>
+
+</html>
