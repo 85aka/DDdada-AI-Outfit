@@ -10,7 +10,7 @@ document.getElementById('generate-btn').addEventListener('click', function(event
     let messages = chatContainer.childNodes;
     let aiResponse = messages[messages.length - 1].innerText;
 
-    // 发送请求以优化提示
+    // 發送請求以優化提示
     fetch('/optimize_prompt', {
         method: 'POST',
         headers: {
@@ -29,7 +29,7 @@ document.getElementById('generate-btn').addEventListener('click', function(event
         let optimizedPrompt = data.optimized_prompt;
         console.log("Sending request to /generate_image with body:", JSON.stringify({"optimized_prompt": optimizedPrompt}));
 
-        // 使用优化的提示生成图像
+        // 使用優化的提示生成圖像
         return fetch('/generate_image', {
             method: 'POST',
             headers: {
@@ -46,7 +46,7 @@ document.getElementById('generate-btn').addEventListener('click', function(event
         }
         
         let imageUrl = data.image_url;
-        document.getElementById('AI_img').src = imageUrl; // 显示生成的图像
+        document.getElementById('AI_img').src = imageUrl; // 顯示生成的圖像
     })
     .catch(error => {
         console.error("Error encountered:", error);
